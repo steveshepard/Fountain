@@ -28,8 +28,8 @@
 
 @interface FNHTMLScript : NSObject
 
-@property (retain, nonatomic) NSFont *font;
-@property (retain, nonatomic) FNScript *script;
+@property (strong, nonatomic) NSFont *font;
+@property (strong, nonatomic) FNScript *script;
 
 - (id)initWithScript:(FNScript *)aScript;
 

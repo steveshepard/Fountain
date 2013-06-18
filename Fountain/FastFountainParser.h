@@ -26,8 +26,8 @@
 
 @interface FastFountainParser : NSObject
 
-@property (retain, nonatomic) NSMutableArray *elements;
-@property (retain, nonatomic) NSMutableArray *titlePage;
+@property (strong, nonatomic) NSMutableArray *elements;
+@property (strong, nonatomic) NSMutableArray *titlePage;
 
 - (id)initWithFile:(NSString *)filePath;
 - (id)initWithString:(NSString *)string;

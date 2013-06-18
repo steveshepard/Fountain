@@ -42,14 +42,6 @@
 
 @synthesize font, script, cssText, bodyText;
 
-- (void)dealloc
-{
-    [font release];
-    [script release];
-    [cssText release];
-    [bodyText release];
-    [super dealloc];
-}
 
 - (id)initWithScript:(FNScript *)aScript
 {

@@ -65,7 +65,6 @@
     FastFountainParser *parser = [[FastFountainParser alloc] initWithFile:path];
     self.elements = parser.elements;
     self.titlePage = parser.titlePage;
-    [parser release];
 }
 
 - (void)loadString:(NSString *)string
@@ -74,16 +73,8 @@
     FastFountainParser *parser = [[FastFountainParser alloc] initWithString:string];
     self.elements = parser.elements;
     self.titlePage = parser.titlePage;
-    [parser release];
 }
 
-- (void)dealloc
-{
-    [filename release];
-    [elements release];
-    [titlePage release];
-    [super dealloc];
-}
 
 - (NSString *)stringFromDocument
 {
@@ -160,7 +151,6 @@
         FastFountainParser *parser = [[FastFountainParser alloc] initWithString:string];
         self.elements = parser.elements;
         self.titlePage = parser.titlePage;
-        [parser release];
     }
 }
 
@@ -175,7 +165,6 @@
         FastFountainParser *parser = [[FastFountainParser alloc] initWithFile:path];
         self.elements = parser.elements;
         self.titlePage = parser.titlePage;
-        [parser release];
     }
 }
 

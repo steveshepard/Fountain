@@ -27,7 +27,7 @@
 #import "FNElement.h"
 
 @interface FNScriptTests ()
-@property (nonatomic, retain) FNScript *script;
+@property (nonatomic, strong) FNScript *script;
 @end
 
 @implementation FNScriptTests
@@ -42,7 +42,6 @@
 
 - (void)tearDown
 {
-    [script release];
     [super tearDown];
 }
 
@@ -53,7 +52,6 @@
     NSString *string = @"FADE IN:";
     FNScript *testScript = [[FNScript alloc] initWithString:string];
     STAssertNotNil(testScript, @"Script did not init with this string: %@", string);
-    [testScript release];
 }
 
 - (void)testLoadFile

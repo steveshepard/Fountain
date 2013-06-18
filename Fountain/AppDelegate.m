@@ -13,13 +13,6 @@
 
 @implementation AppDelegate
 
-@synthesize webView = _webView;
-
-- (void)dealloc
-{
-    [_webView release];
-    [super dealloc];
-}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {

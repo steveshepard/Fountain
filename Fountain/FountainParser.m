@@ -189,7 +189,6 @@
         }
         
         [elementsArray addObject:element];
-        [element release];
     }    
     return [NSArray arrayWithArray:elementsArray];
 }

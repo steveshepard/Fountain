@@ -38,12 +38,6 @@ static NSString * const kContentPattern = @"";
 
 @synthesize elements, titlePage;
 
-- (void)dealloc
-{
-    [elements release];
-    [titlePage release];
-    [super dealloc];
-}
 
 - (void)parseContents:(NSString *)contents
 {
@@ -264,12 +258,11 @@ static NSString * const kContentPattern = @"";
                 text = line;
             }
             
-            FNElement *element = [[FNElement elementOfType:@"Scene Heading" text:text] retain];
+            FNElement *element = [FNElement elementOfType:@"Scene Heading" text:text];
             if (sceneNumber) {
                 element.sceneNumber = sceneNumber;
             }
             [self.elements addObject:element];
-            [element release];
             continue;
         }
         

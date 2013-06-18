@@ -29,8 +29,8 @@
 
 @interface FNPaginator ()
 
-@property (retain, nonatomic) FNScript *script;
-@property (retain, nonatomic) NSMutableArray *pages;
+@property (strong, nonatomic) FNScript *script;
+@property (strong, nonatomic) NSMutableArray *pages;
 
 @end
 
@@ -38,12 +38,6 @@
 
 @synthesize script, pages, numberOfPages;
 
-- (void)dealloc
-{
-    [script release];
-    [pages release];
-    [super dealloc];
-}
 
 - (id)initWithScript:(FNScript *)aScript
 {
@@ -177,7 +171,6 @@
                     forcedBreak.elementType = @"Page Break";
                     forcedBreak.elementText = @"";
                     [tmpElements addObject:forcedBreak];
-                    [forcedBreak release];
                 }
                 
                 [tmpElements addObject:element];
@@ -267,7 +260,6 @@
                                 more.elementText = @"(MORE)";
                                 
                                 [currentPage addObject:more];
-                                [more release];
                                 
                                 // close the page
                                 [pages addObject:currentPage];
@@ -354,7 +346,6 @@
                                 more.elementText = @"(MORE)";
                                 
                                 [currentPage addObject:more];
-                                [more release];
                                 
                                 // close the page
                                 [pages addObject:currentPage];
@@ -369,7 +360,6 @@
                                 }
                             }
                             
-                            [preBreakDialogue release];
                             
 
                             // reset the block height
@@ -383,7 +373,6 @@
                             blockHeight += [FNPaginator heightForString:characterCue.elementText font:font maxWidth:[FNPaginator widthForElement:characterCue] lineHeight:lineHeight];
                             
                             [currentPage addObject:characterCue];
-                            [characterCue release];
                             
                             // create the postBreakDialogue
                             if (sentenceIndex < 0) {
@@ -402,7 +391,6 @@
                             blockHeight += [FNPaginator heightForString:postBreakDialogue.elementText font:font maxWidth:[FNPaginator widthForElement:postBreakDialogue] lineHeight:lineHeight];                        
                             
                             [currentPage addObject:postBreakDialogue];
-                            [postBreakDialogue release];
                             
                             // add remaining elements
                             if (blockIndex + 1 < maxTmpElements) {
@@ -565,9 +553,9 @@
     }
     
     // free memory
-    [layoutManager autorelease];
-    [textContainer autorelease];
-    [textStorage autorelease];
+//    [layoutManager autorelease];
+//    [textContainer autorelease];
+//    [textStorage autorelease];
     
     // calculate the height
     NSInteger height = numberOfLines * lineHeight;

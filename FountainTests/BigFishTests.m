@@ -27,7 +27,7 @@
 #import "FNElement.h"
 
 @interface BigFishTests ()
-@property (nonatomic, retain) FNScript *script;
+@property (nonatomic, strong) FNScript *script;
 @end
 
 @implementation BigFishTests
@@ -44,7 +44,6 @@
 
 - (void)tearDown
 {
-    [script release];
     [super tearDown];
 }
 

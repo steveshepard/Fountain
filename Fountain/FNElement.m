@@ -45,18 +45,11 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [elementType release];
-    [elementText release];
-    [sceneNumber release];
-    [super dealloc];
-}
 
 - (NSString *)description
 {
     NSString *textOutput = self.elementText;
-    NSMutableString *typeOutput = [NSMutableString stringWithFormat:self.elementType];
+    NSMutableString *typeOutput = [NSMutableString stringWithString:self.elementType];
     
     if (self.isCentered) {
         [typeOutput appendString:@" (centered)"];
@@ -65,7 +58,7 @@
         [typeOutput appendString:@" (dual dialogue)"];
     }
     else if (self.sectionDepth) {
-        [typeOutput appendFormat:@" (%d)", self.sectionDepth];
+        [typeOutput appendFormat:@" (%lu)", (unsigned long)self.sectionDepth];
     }
     
     return [NSString stringWithFormat:@"%@: %@", typeOutput, textOutput];
@@ -77,7 +70,7 @@
     FNElement *element = [[FNElement alloc] init];
     element.elementType = elementType;
     element.elementText = elementText;
-    return [element autorelease];
+    return element;
 }
 
 

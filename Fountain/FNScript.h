@@ -39,8 +39,8 @@ typedef enum {
 }
 
 @property (nonatomic, copy) NSString *filename;
-@property (nonatomic, retain) NSArray *elements;
-@property (nonatomic, retain) NSArray *titlePage;
+@property (nonatomic, strong) NSArray *elements;
+@property (nonatomic, strong) NSArray *titlePage;
 @property (nonatomic, assign) BOOL suppressSceneNumbers;
 
 - (id)initWithFile:(NSString *)path;
