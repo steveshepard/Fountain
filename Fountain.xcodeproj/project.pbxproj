@@ -36,6 +36,8 @@
 		3CBFF74215940A40005EC5BF /* Big Fish.fountain in Resources */ = {isa = PBXBuildFile; fileRef = 3C8CD0E214DF589E00F18DE6 /* Big Fish.fountain */; };
 		3CBFF74415940ACC005EC5BF /* ScriptCSS.css in Resources */ = {isa = PBXBuildFile; fileRef = 3CBFF74315940ACC005EC5BF /* ScriptCSS.css */; };
 		3CBFF74715940D52005EC5BF /* FNPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBFF74615940D52005EC5BF /* FNPaginator.m */; };
+		AA7905A7178F6C9E00C8A1A5 /* SynopsisTest.fountain in Resources */ = {isa = PBXBuildFile; fileRef = AA7905A6178F6C9E00C8A1A5 /* SynopsisTest.fountain */; };
+		AA9B686A178F6EA700A980AC /* FastFountainParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B6869178F6EA700A980AC /* FastFountainParserTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,9 @@
 		3CBFF74315940ACC005EC5BF /* ScriptCSS.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ScriptCSS.css; sourceTree = "<group>"; };
 		3CBFF74515940D52005EC5BF /* FNPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNPaginator.h; sourceTree = "<group>"; };
 		3CBFF74615940D52005EC5BF /* FNPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNPaginator.m; sourceTree = "<group>"; };
+		AA7905A6178F6C9E00C8A1A5 /* SynopsisTest.fountain */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SynopsisTest.fountain; sourceTree = "<group>"; };
+		AA9B6868178F6EA700A980AC /* FastFountainParserTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastFountainParserTests.h; sourceTree = "<group>"; };
+		AA9B6869178F6EA700A980AC /* FastFountainParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastFountainParserTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +218,8 @@
 				3C76B00C14E05C5C00EDDA5F /* FNScriptTests.m */,
 				3C8CD10B14DF9D9400F18DE6 /* FountainWriterTests.h */,
 				3C8CD10C14DF9D9400F18DE6 /* FountainWriterTests.m */,
+				AA9B6868178F6EA700A980AC /* FastFountainParserTests.h */,
+				AA9B6869178F6EA700A980AC /* FastFountainParserTests.m */,
 				3C8CD0E014DF579700F18DE6 /* Test Files */,
 				3C0BB05114DF3D56004A90E8 /* Supporting Files */,
 			);
@@ -234,6 +241,7 @@
 				3C8CD0E214DF589E00F18DE6 /* Big Fish.fountain */,
 				3C8CD10614DF7CCC00F18DE6 /* Brick And Steel.txt */,
 				3C8CD10E14DFA9D700F18DE6 /* Simple.fountain */,
+				AA7905A6178F6C9E00C8A1A5 /* SynopsisTest.fountain */,
 			);
 			name = "Test Files";
 			sourceTree = "<group>";
@@ -345,6 +353,7 @@
 			files = (
 				3C0BB05514DF3D56004A90E8 /* InfoPlist.strings in Resources */,
 				3C8CD0E314DF589E00F18DE6 /* Big Fish.fountain in Resources */,
+				AA7905A7178F6C9E00C8A1A5 /* SynopsisTest.fountain in Resources */,
 				3C8CD10714DF7CCC00F18DE6 /* Brick And Steel.txt in Resources */,
 				3C8CD10F14DFA9D700F18DE6 /* Simple.fountain in Resources */,
 			);
@@ -396,6 +405,7 @@
 				3C8CD10D14DF9D9400F18DE6 /* FountainWriterTests.m in Sources */,
 				3C76B00D14E05C5C00EDDA5F /* FNScriptTests.m in Sources */,
 				3CB1978214E0D50A00FC672F /* SyntaxTests.m in Sources */,
+				AA9B686A178F6EA700A980AC /* FastFountainParserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +496,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
